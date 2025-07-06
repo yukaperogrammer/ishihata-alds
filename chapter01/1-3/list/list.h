@@ -11,10 +11,10 @@ typedef struct list {
     int size;
 } List;
 
-void init(List *);
-int insert(List *, int, char *);
-int delete(List *, int);
-char *get(List *, int);
+void initList(List *);
+int insertIntoList(List *, int, char *);
+int deleteFromList(List *, int);
+char *getFromList(List *, int);
 void showList(List *);
 void *xmalloc(void *, size_t);
 

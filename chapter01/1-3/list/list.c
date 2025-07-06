@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include "list.h"
 
-void init(List *list) {
+void initList(List *list) {
     list->head = NULL;
     list->size = 0;
 }
 
-int insert(List *list, int target, char *value) {
+int insertIntoList(List *list, int target, char *value) {
     int i;
     Element *prev = NULL;
     Element *current = NULL;
@@ -45,7 +45,7 @@ int insert(List *list, int target, char *value) {
     return 1;
 }
 
-int delete(List *list, int target) {
+int deleteFromList(List *list, int target) {
     int i;
     Element *prev = NULL;
     Element *current = NULL;
@@ -76,7 +76,7 @@ int delete(List *list, int target) {
     return 1;
 }
 
-char *get(List *list, int target) {
+char *getFromList(List *list, int target) {
     int i;
     Element *current = NULL;
 

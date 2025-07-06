@@ -3,28 +3,28 @@
 
 int main(int argc, char *argv[]) {
     List strList;
-    init(&strList);
+    initList(&strList);
 
-    insert(&strList, 0, "100");
-    insert(&strList, 1, "200");
-    insert(&strList, 1, "300");
-    insert(&strList, 0, "1000");
-    insert(&strList, 4, "999");
+    insertIntoList(&strList, 0, "100");
+    insertIntoList(&strList, 1, "200");
+    insertIntoList(&strList, 1, "300");
+    insertIntoList(&strList, 0, "1000");
+    insertIntoList(&strList, 4, "999");
     showList(&strList);
-    printf("index %d value = %s\n",2, get(&strList, 2));
-    printf("index %d value = %s\n",0, get(&strList, 0));
-    printf("index %d value = %s\n",4, get(&strList, 4));
+    printf("index %d value = %s\n",2, getFromList(&strList, 2));
+    printf("index %d value = %s\n",0, getFromList(&strList, 0));
+    printf("index %d value = %s\n",4, getFromList(&strList, 4));
     printf("------------------------------\n");
 
-    delete(&strList, 0);
-    showList(&strList);
-    printf("------------------------------\n");
-
-    delete(&strList, 3);
+    deleteFromList(&strList, 0);
     showList(&strList);
     printf("------------------------------\n");
 
-    delete(&strList, 1);
+    deleteFromList(&strList, 3);
+    showList(&strList);
+    printf("------------------------------\n");
+
+    deleteFromList(&strList, 1);
     showList(&strList);
     printf("------------------------------\n");
 
